@@ -2,7 +2,7 @@
 
 Enter the string:  In technical terms, Python is an object oriented, high level programming language with integrated dynamic semantics primarily for web and app development. It is extremely attractive in the field of Rapid Application Development because it offers dynamic typing and dynamic binding options.
 
-Number of each word/character in string is: {'': 1, 'in': 2, 'technical': 1, 'terms,': 1, 'python': 1, 'is': 2, 'an': 1, 'object': 1, 'oriented,': 1, 'high': 1, 'level': 1, 'programming': 1, 'language': 1, 'with': 1, 'integrated': 1, 'dynamic': 3, 'semantics': 1, 'primarily': 1, 'for': 1, 'web': 1, 'and': 2, 'app': 1, 'development.': 1, 'it': 2, 'extremely': 1, 'attractive': 1, 'the': 1, 'field': 1, 'of': 1, 'rapid': 1, 'application': 1, 'development': 1, 'because': 1, 'offers': 1, 'typing': 1, 'binding': 1, 'options.': 1} 
+Number of each word/character in string is: {'in': 2, 'technical': 1, 'terms,': 1, 'python': 1, 'is': 2, 'an': 1, 'object': 1, 'oriented,': 1, 'high': 1, 'level': 1, 'programming': 1, 'language': 1, 'with': 1, 'integrated': 1, 'dynamic': 3, 'semantics': 1, 'primarily': 1, 'for': 1, 'web': 1, 'and': 2, 'app': 1, 'development.': 1, 'it': 2, 'extremely': 1, 'attractive': 1, 'the': 1, 'field': 1, 'of': 1, 'rapid': 1, 'application': 1, 'development': 1, 'because': 1, 'offers': 1, 'typing': 1, 'binding': 1, 'options.': 1} 
 
 	 Question 2 
 
