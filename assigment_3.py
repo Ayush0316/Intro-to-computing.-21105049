@@ -10,7 +10,16 @@ print()
 count_dict = {}        # created a empty dic for counting particular word.
 
 # spliting the string in list of words
-user_words = user_input.split(" ")
+user_words_with_punctuation = user_input.split(" ")
+user_words = []
+
+# Using loop to remove some common punctuations.
+for word in user_words_with_punctuation:
+
+    if word[-1] == "." or word[-1] == "," or word[-1] == "!" or word[-1] == "?":
+        word = word.rstrip(word[-1])
+    
+    user_words.append(word)
 
 # checking whether input is a single word or not so that we will be able to count diff char if string is of single word
 if len(user_words) == 1:
@@ -40,8 +49,13 @@ month = int(input("Enter the month: "))
 year = int(input("Enter the year: "))
 print()
 
+# Condition for valid dates.
+check_1 = (month in (1,3,5,7,8,10,12) and (1 <= date <= 31))
+check_2 = (month in (4,6,9,11) and (1 <= date <= 30))
+check_3 = ((year % 4) == 0 and month == 2 and (1 <= date <= 29)) or ((year % 4) != 0 and month == 2 and (1 <= date <= 29))
+
 # Calculating next date.
-if (1 <= month <= 12) and (1 <= date <= 31) and (1800 <= year <= 2025): # checking whether date is valid or not. 
+if (check_1 or check_2 or check_3) and (1800 <= year <= 2025): # checking whether date is valid or not. 
     
     # calculating next date for months having 31 days.
     if month in (1,3,5,7,8,10):
@@ -87,9 +101,10 @@ if (1 <= month <= 12) and (1 <= date <= 31) and (1800 <= year <= 2025): # checki
     
      # Printing next date.
     if date == 1 and month == 1 and year == 2026:
-        print("Date is out of range.")
+        print("Next date is out of range.")
     else:
         print(f"Next day is: {date}/{month}/{year}")
+
 else:
     # printing if date is not valid.
     print("Invalid Date.")
@@ -105,7 +120,12 @@ output_list = []
 
 # taking list from user.
 max_input = int(input("Enter the total number of terms you gonna enter: "))
+
+# checking for +ve input.
+if max_input <= 0:
+    print("Please enter a positive number.")
 print()
+
 for i in range(max_input):
     tmp_num = int(input(f"Enter the {i + 1} number: "))
     given_list.append(tmp_num)
@@ -285,6 +305,7 @@ while True:
     # if max number is negative.
     if max_num_of_terms <= 0:
         print("Plese enter a positive integer")
+        print()
 
     # printing fab series using above rec function.
     else:
