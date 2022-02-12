@@ -15,8 +15,9 @@ user_words = []
 
 # Using loop to remove some common punctuations.
 for word in user_words_with_punctuation:
-
-    if word[-1] == "." or word[-1] == "," or word[-1] == "!" or word[-1] == "?":
+    
+    letter = word[-1]
+    if letter == "." or letter == "," or letter == "!" or letter == "?":
         word = word.rstrip(word[-1])
     
     user_words.append(word)
